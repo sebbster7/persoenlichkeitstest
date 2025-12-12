@@ -1,0 +1,388 @@
+:root {
+  --bg: #fbfbfd;
+  --bg-grey: #f5f5f7;
+  --text: #1d1d1f;
+  --muted: #6e6e73;
+  --accent: #0071e3;
+  --accent-soft: rgba(0,113,227,0.08);
+  --border-soft: #d2d2d7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+/* Top-Navigation */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(20px);
+  background: rgba(22,22,23,0.92);
+  color: #f5f5f7;
+  font-size: 14px;
+}
+
+.nav-inner {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 16px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.nav-links a {
+  color: #f5f5f7;
+  text-decoration: none;
+  margin-left: 20px;
+  opacity: 0.85;
+}
+
+.nav-links a:hover {
+  opacity: 1;
+}
+
+/* Hinweisbanner */
+.banner {
+  background: var(--bg-grey);
+  font-size: 13px;
+  text-align: center;
+  padding: 8px 16px;
+  color: var(--muted);
+}
+
+/* Hero-Sektionen */
+.hero {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-light {
+  background: #000;
+  color: #f5f5f7;
+}
+
+.hero-grey {
+  background: var(--bg-grey);
+  color: var(--text);
+}
+
+.hero-inner {
+  max-width: 980px;
+  padding: 80px 16px;
+}
+
+.hero-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.hero-text {
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 42px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin: 0 0 12px;
+}
+
+.hero h2 {
+  font-size: 34px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin: 0 0 12px;
+}
+
+.hero-sub {
+  font-size: 19px;
+  line-height: 1.5;
+  color: #d2d2d7;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.hero-sub-dark {
+  color: var(--muted);
+}
+
+.hero-actions {
+  margin-top: 28px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* Hero-Bild */
+.hero-image img {
+  max-width: 380px;
+  width: 100%;
+  border-radius: 24px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Buttons */
+.btn-primary,
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 500;
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: #fff;
+  color: #000;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #fff;
+  border-color: #f5f5f7;
+}
+
+.hero-grey .btn-primary {
+  background: var(--accent);
+  color: #fff;
+}
+
+.hero-grey .btn-secondary {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+/* Allgemeine Sektionen */
+.section {
+  display: flex;
+  justify-content: center;
+  background: var(--bg);
+}
+
+.section:nth-of-type(even) {
+  background: #fff;
+}
+
+.section-inner {
+  max-width: 980px;
+  width: 100%;
+  padding: 60px 16px;
+}
+
+.section h2 {
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin: 0 0 16px;
+}
+
+.section-text {
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--muted);
+  max-width: 640px;
+}
+
+/* Kachelbereich */
+.tiles {
+  display: grid;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+@media (min-width: 768px) {
+  .tiles {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.tile {
+  border-radius: 18px;
+  padding: 30px 24px;
+  text-align: left;
+}
+
+.tile-dark {
+  background: #000;
+  color: #f5f5f7;
+}
+
+.tile-light {
+  background: var(--bg-grey);
+}
+
+.tile h3 {
+  font-size: 22px;
+  margin: 0 0 8px;
+}
+
+.tile p {
+  font-size: 15px;
+  color: inherit;
+  opacity: 0.9;
+}
+
+.tile-link {
+  display: inline-flex;
+  margin-top: 12px;
+  font-size: 15px;
+  text-decoration: none;
+  color: var(--accent);
+}
+
+/* Icons in Tiles */
+.tile-icon {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 12px;
+}
+
+/* Split-Layout für Coaching */
+.section-split .split-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+@media (min-width: 768px) {
+  .hero-flex {
+    flex-direction: row;
+    align-items: center;
+  }
+  .hero-text {
+    flex: 1;
+    text-align: left;
+  }
+  .hero-image {
+    flex: 1;
+  }
+  .section-split .split-inner {
+    flex-direction: row;
+  }
+  .section-split .split-inner > div {
+    flex: 1;
+  }
+}
+
+/* Coaching-Bild */
+.coaching-image-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.coaching-image {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 18px;
+  display: block;
+}
+
+/* Listen */
+.bullet-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 16px;
+}
+
+.bullet-list li::before {
+  content: "• ";
+}
+
+/* Formulare */
+.quicktest-form,
+.contact-form {
+  margin-top: 28px;
+  text-align: left;
+}
+
+.form-row {
+  margin-bottom: 18px;
+}
+
+.form-row label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: var(--muted);
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 9px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border-soft);
+  font-size: 14px;
+  font-family: inherit;
+  background: #fff;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.quicktest-result {
+  margin-top: 18px;
+  font-size: 15px;
+  color: var(--text);
+}
+
+/* Footer */
+.footer {
+  background: var(--bg-grey);
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.footer-inner {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 24px 16px 32px;
+}
+
+.footer-note {
+  margin: 0 0 16px;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px;
+  border-top: 1px solid var(--border-soft);
+  padding-top: 12px;
+}
+
+.footer-links a {
+  color: var(--muted);
+  text-decoration: none;
+  margin-left: 16px;
+}
