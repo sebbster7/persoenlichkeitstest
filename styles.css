@@ -740,7 +740,8 @@ textarea {
   }
   
   .nav-links {
-    display: none;
+    gap: 12px;
+    font-size: 11px;
   }
   
   .hero-inner {
