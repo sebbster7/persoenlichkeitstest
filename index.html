@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
   <meta charset="utf-8">
-  <title>Persönlichkeitstraining | Schnelltest & Coaching</title>
+  <title>BewegungsCheck AI | Schnelltest & Coaching</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -11,10 +11,11 @@
   <!-- Top-Nav -->
   <header class="nav">
     <div class="nav-inner">
-      <div class="nav-logo">StefRe</div>
+      <div class="nav-logo">BewegungsCheck AI</div>
       <nav class="nav-links">
-        <a href="#tests">Tests</a>
-        <a href="#coaching">Coaching</a>
+        <a href="#tests">Stufen</a>
+        <a href="#subscriptions">Abo-Modelle</a>
+        <a href="#integrations">Integrationen</a>
         <a href="#about">Über mich</a>
         <a href="#kontakt">Kontakt</a>
       </nav>
@@ -23,13 +24,14 @@
 
   <!-- Hinweis-Leiste -->
   <section class="banner">
-            <p>Starte <a href="#quicktest">jetzt</a> deinen kostenlosen 10-Minuten-Schnelltest für dein Persönlichkeitsprofil.</p>  </section>
+    <p>Starte <a href="#quicktest">jetzt</a> deinen kostenlosen 10-Minuten-Schnelltest für dein Persönlichkeitsprofil.</p>
+  </section>
 
-  <!-- Hero-Sektion Schnelltest -->
+  <!-- Hero-Sektion -->
   <main>
-    <section class="hero hero-light" id="top">
-      <div class="hero-inner hero-flex">
-        <div class="hero-text">
+    <section class="hero" id="top">
+      <div class="hero-inner">
+        <div class="hero-content">
           <h1>Persönlichkeit verstehen. Entscheidungen klarer treffen.</h1>
           <p class="hero-sub">
             Online Persönlichkeitstraining in drei Schritten: Gratis-Schnelltest, detaillierter Test
@@ -40,14 +42,6 @@
             <a href="#tests" class="btn-secondary">Mehr erfahren</a>
           </div>
         </div>
-        <div class="hero-image">
-          <!-- Replaced placeholder with Pexels photo ID 4343780 -->
-          <img
-            src="https://images.pexels.com/photos/4343780/pexels-photo-4343780.jpeg?auto=compress&cs=tinysrgb&w=800"
-            alt="Frau mit Notizbuch, nachdenkliche Pose"
-            loading="lazy"
-          >
-        </div>
       </div>
     </section>
 
@@ -56,20 +50,20 @@
       <div class="section-inner">
         <h2>Dein Weg in drei Stufen</h2>
         <div class="tiles">
-          <article class="tile tile-dark">
-            <img class="tile-icon" src="images/icon-quicktest.svg" alt="Icon Schnelltest">
+          <article class="tile">
+            <div class="tile-icon">📋</div>
             <h3>Gratis-Schnelltest</h3>
             <p>In rund 10 Minuten erhältst du eine erste Einschätzung deiner Persönlichkeit – direkt im Browser.</p>
             <a href="#quicktest" class="tile-link">Jetzt starten ›</a>
           </article>
-          <article class="tile tile-light">
-            <img class="tile-icon" src="images/icon-extended-test.svg" alt="Icon Detaillierter Test">
+          <article class="tile">
+            <div class="tile-icon">📊</div>
             <h3>Detaillierter Test (49 €)</h3>
             <p>Mehrdimensionale Auswertung mit Stärken, Entwicklungsfeldern und konkreten Empfehlungen.</p>
             <a href="#extended" class="tile-link">Details ansehen ›</a>
           </article>
-          <article class="tile tile-light">
-            <img class="tile-icon" src="images/icon-coaching.svg" alt="Icon Coaching">
+          <article class="tile">
+            <div class="tile-icon">🤖</div>
             <h3>1:1 Coaching</h3>
             <p>Übertrage dein Profil in klare Ziele und nächste Schritte – im individuellen Coaching.</p>
             <a href="#coaching" class="tile-link">Coaching entdecken ›</a>
@@ -79,87 +73,182 @@
     </section>
 
     <!-- Schnelltest-Bereich -->
-    <section class="section hero hero-grey" id="quicktest">
-      <div class="hero-inner hero-narrow">
+    <section class="section stage-section" id="quicktest">
+      <div class="section-inner">
+        <div class="stage-label">STUFE 1</div>
         <h2>Gratis-Schnelltest</h2>
-        <p class="hero-sub hero-sub-dark">
+        <p class="section-text">
           Beantworte ein paar Aussagen spontan. Am Ende erhältst du eine erste Einschätzung deines Profils.
         </p>
-        <form class="quicktest-form" id="quicktest-form">
-          <div class="form-row">
-            <label>Ich übernehme gerne Verantwortung in Gruppen.</label>
-            <select name="q1">
-              <option value="1">Trifft kaum zu</option>
-              <option value="2">Trifft eher nicht zu</option>
-              <option value="3">Teils / teils</option>
-              <option value="4">Trifft eher zu</option>
-              <option value="5">Trifft voll zu</option>
-            </select>
-          </div>
-          <div class="form-row">
-            <label>Struktur und Planung sind mir wichtig.</label>
-            <select name="q2">
-              <option value="1">Trifft kaum zu</option>
-              <option value="2">Trifft eher nicht zu</option>
-              <option value="3">Teils / teils</option>
-              <option value="4">Trifft eher zu</option>
-              <option value="5">Trifft voll zu</option>
-            </select>
-          </div>
-          <div class="form-row">
-            <label>Ich gehe offen auf neue Menschen zu.</label>
-            <select name="q3">
-              <option value="1">Trifft kaum zu</option>
-              <option value="2">Trifft eher nicht zu</option>
-              <option value="3">Teils / teils</option>
-              <option value="4">Trifft eher zu</option>
-              <option value="5">Trifft voll zu</option>
-            </select>
-          </div>
-          <button type="button" id="quicktest-evaluate" class="btn-primary">Auswertung anzeigen</button>
-        </form>
-        <div id="quicktest-result" class="quicktest-result"></div>
+        <div class="stage-card">
+          <form class="quicktest-form" id="quicktest-form">
+            <div class="form-row">
+              <label>Ich übernehme gerne Verantwortung in Gruppen.</label>
+              <select name="q1">
+                <option value="1">Trifft kaum zu</option>
+                <option value="2">Trifft eher nicht zu</option>
+                <option value="3">Teils / teils</option>
+                <option value="4">Trifft eher zu</option>
+                <option value="5">Trifft voll zu</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <label>Struktur und Planung sind mir wichtig.</label>
+              <select name="q2">
+                <option value="1">Trifft kaum zu</option>
+                <option value="2">Trifft eher nicht zu</option>
+                <option value="3">Teils / teils</option>
+                <option value="4">Trifft eher zu</option>
+                <option value="5">Trifft voll zu</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <label>Ich gehe offen auf neue Menschen zu.</label>
+              <select name="q3">
+                <option value="1">Trifft kaum zu</option>
+                <option value="2">Trifft eher nicht zu</option>
+                <option value="3">Teils / teils</option>
+                <option value="4">Trifft eher zu</option>
+                <option value="5">Trifft voll zu</option>
+              </select>
+            </div>
+            <button type="button" id="quicktest-evaluate" class="btn-primary">Auswertung anzeigen</button>
+          </form>
+          <div id="quicktest-result" class="quicktest-result"></div>
+        </div>
       </div>
     </section>
 
     <!-- Detaillierter Test -->
-    <section class="section" id="extended">
+    <section class="section stage-section" id="extended">
       <div class="section-inner">
-        <h2>Detaillierter Persönlichkeitstest (49 €)</h2>
-        <p class="section-text">
-          Aufbauend auf dem Schnelltest erhältst du ein umfassendes Profil mit mehreren Dimensionen,
-          einem klar strukturierten PDF-Report und konkreten Empfehlungen für deinen Alltag.
-        </p>
+        <div class="stage-label">STUFE 2</div>
+        <div class="stage-content">
+          <div class="stage-text">
+            <h2>Detaillierter Persönlichkeitstest</h2>
+            <p class="section-text">
+              Aufbauend auf dem Schnelltest erhältst du ein umfassendes Profil mit mehreren Dimensionen,
+              einem klar strukturierten PDF-Report und konkreten Empfehlungen für deinen Alltag.
+            </p>
+            <ul class="bullet-list">
+              <li>Mehrdimensionale Auswertung</li>
+              <li>Strukturierter PDF-Report</li>
+              <li>Konkrete Empfehlungen</li>
+              <li>Stärken & Entwicklungsfelder</li>
+            </ul>
+          </div>
+          <div class="stage-pricing">
+            <div class="price-tag">49 €</div>
+            <button class="btn-primary">Test kaufen</button>
+          </div>
+        </div>
         <div id="extended-root"><!-- extended module can render here --></div>
       </div>
     </section>
 
     <!-- Coaching -->
-    <section class="section section-split" id="coaching">
-      <div class="section-inner split-inner">
-        <div>
-          <h2>1:1 Coaching</h2>
-          <p class="section-text">
-            Im Coaching werden aus deinem Persönlichkeitsprofil konkrete Schritte: Ziele definieren, Prioritäten klären,
-            Routinen etablieren. Online und flexibel planbar.
-          </p>
-          <ul class="bullet-list">
-            <li>Karriere- und Rollenklärung</li>
-            <li>Führung & Zusammenarbeit</li>
-            <li>Umgang mit Stress & Entscheidungen</li>
-          </ul>
-
-          <!-- Added Pexels photo ID 4098366 after the coaching text -->
-          <img
-            src="https://images.pexels.com/photos/4098366/pexels-photo-4098366.jpeg?auto=compress&cs=tinysrgb&w=800"
-            alt="Zwei Personen in einem Coaching-Gespräch"
-            class="coaching-image"
-            loading="lazy"
-            style="max-width:480px; margin-top:18px;"
-          >
+    <section class="section stage-section" id="coaching">
+      <div class="section-inner">
+        <div class="stage-label">STUFE 3</div>
+        <div class="stage-content">
+          <div class="stage-text">
+            <h2>1:1 Coaching</h2>
+            <p class="section-text">
+              Im Coaching werden aus deinem Persönlichkeitsprofil konkrete Schritte: Ziele definieren, Prioritäten klären,
+              Routinen etablieren. Online und flexibel planbar.
+            </p>
+            <ul class="bullet-list">
+              <li>Karriere- und Rollenklärung</li>
+              <li>Führung & Zusammenarbeit</li>
+              <li>Umgang mit Stress & Entscheidungen</li>
+            </ul>
+          </div>
+          <div class="stage-pricing">
+            <button class="btn-primary">Coaching anfragen</button>
+          </div>
         </div>
+      </div>
+    </section>
 
-        <!-- removed separate placeholder wrapper to avoid duplicate images -->
+    <!-- Subscription Slider -->
+    <section class="section" id="subscriptions">
+      <div class="section-inner">
+        <h2>Abo-Modelle</h2>
+        <p class="section-text">Wähle das Paket, das zu deinen Bedürfnissen passt.</p>
+        <div class="subscription-slider">
+          <div class="subscription-card">
+            <h3>Basic</h3>
+            <div class="subscription-price">
+              <span class="price">9€</span>
+              <span class="period">/Monat</span>
+            </div>
+            <ul class="subscription-features">
+              <li>Gratis-Schnelltest</li>
+              <li>Basis-Auswertung</li>
+              <li>E-Mail Support</li>
+            </ul>
+            <button class="btn-secondary">Auswählen</button>
+          </div>
+          <div class="subscription-card featured">
+            <div class="featured-badge">Beliebt</div>
+            <h3>Pro</h3>
+            <div class="subscription-price">
+              <span class="price">29€</span>
+              <span class="period">/Monat</span>
+            </div>
+            <ul class="subscription-features">
+              <li>Alle Basic Features</li>
+              <li>Detaillierter Test</li>
+              <li>Monatliches Coaching (30min)</li>
+              <li>Prioritäts-Support</li>
+            </ul>
+            <button class="btn-primary">Auswählen</button>
+          </div>
+          <div class="subscription-card">
+            <h3>Premium</h3>
+            <div class="subscription-price">
+              <span class="price">99€</span>
+              <span class="period">/Monat</span>
+            </div>
+            <ul class="subscription-features">
+              <li>Alle Pro Features</li>
+              <li>Wöchentliches Coaching (60min)</li>
+              <li>Persönlicher Coach</li>
+              <li>24/7 Support</li>
+            </ul>
+            <button class="btn-secondary">Auswählen</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Integrationen -->
+    <section class="section" id="integrations">
+      <div class="section-inner">
+        <h2>Integrationen</h2>
+        <p class="section-text">Verbinde deine Lieblings-Apps und Wearables für ein ganzheitliches Erlebnis.</p>
+        <div class="integration-grid">
+          <div class="integration-card">
+            <div class="integration-icon">🍎</div>
+            <h3>Apple Health</h3>
+            <p>Synchronisiere deine Gesundheitsdaten</p>
+          </div>
+          <div class="integration-card">
+            <div class="integration-icon">⌚</div>
+            <h3>Garmin</h3>
+            <p>Verbinde deine Garmin-Geräte</p>
+          </div>
+          <div class="integration-card">
+            <div class="integration-icon">💪</div>
+            <h3>Fitbit</h3>
+            <p>Integriere deine Fitbit-Daten</p>
+          </div>
+          <div class="integration-card">
+            <div class="integration-icon">🏃</div>
+            <h3>Strava</h3>
+            <p>Tracke deine Aktivitäten</p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -170,38 +259,31 @@
         <p class="section-text">
           Hier kannst du kurz deinen beruflichen Hintergrund, deine Coaching-Schwerpunkte und Qualifikationen vorstellen.
         </p>
-
-        <!-- Added professional headshot (Pexels photo ID 30767577) -->
-        <img
-          src="https://images.pexels.com/photos/30767577/pexels-photo-30767577.jpeg?auto=compress&cs=tinysrgb&w=800"
-          alt="Professionelles Portrait"
-          loading="lazy"
-          class="about-image"
-          style="width:140px;height:140px;object-fit:cover;border-radius:50%;margin-top:16px;"
-        >
       </div>
     </section>
 
     <!-- Kontakt -->
-    <section class="section hero hero-grey" id="kontakt">
-      <div class="hero-inner hero-narrow">
+    <section class="section" id="kontakt">
+      <div class="section-inner">
         <h2>Kontakt & Anfrage</h2>
-        <form class="contact-form" id="contact-form">
-          <div class="form-row">
-            <label>Name</label>
-            <input type="text" name="name" required>
-          </div>
-          <div class="form-row">
-            <label>E-Mail</label>
-            <input type="email" name="email" required>
-          </div>
-          <div class="form-row">
-            <label>Nachricht</label>
-            <textarea name="message" rows="4" placeholder="Kurze Info zu deinem Anliegen"></textarea>
-          </div>
-          <button type="submit" class="btn-primary">Nachricht senden</button>
-        </form>
-        <div id="contact-result" class="contact-result"></div>
+        <div class="contact-card">
+          <form class="contact-form" id="contact-form">
+            <div class="form-row">
+              <label>Name</label>
+              <input type="text" name="name" required>
+            </div>
+            <div class="form-row">
+              <label>E-Mail</label>
+              <input type="email" name="email" required>
+            </div>
+            <div class="form-row">
+              <label>Nachricht</label>
+              <textarea name="message" rows="4" placeholder="Kurze Info zu deinem Anliegen"></textarea>
+            </div>
+            <button type="submit" class="btn-primary">Nachricht senden</button>
+          </form>
+          <div id="contact-result" class="contact-result"></div>
+        </div>
       </div>
     </section>
   </main>
@@ -209,15 +291,35 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="footer-inner">
-      <p class="footer-note">
-        Hinweis: Das Angebot dient der Persönlichkeitsentwicklung und ersetzt keine Psychotherapie oder medizinische Behandlung.
-      </p>
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h3>BewegungsCheck AI</h3>
+          <p>Persönlichkeitsentwicklung durch intelligente Analysen</p>
+        </div>
+        <div class="footer-links-group">
+          <div class="footer-column">
+            <h4>Produkt</h4>
+            <a href="#tests">Stufen</a>
+            <a href="#subscriptions">Abo-Modelle</a>
+            <a href="#integrations">Integrationen</a>
+          </div>
+          <div class="footer-column">
+            <h4>Unternehmen</h4>
+            <a href="#about">Über mich</a>
+            <a href="#kontakt">Kontakt</a>
+          </div>
+          <div class="footer-column">
+            <h4>Rechtliches</h4>
+            <a href="#">Impressum</a>
+            <a href="#">Datenschutz</a>
+          </div>
+        </div>
+      </div>
       <div class="footer-bottom">
-        <span>© Persönlichkeitstraining – Jahr</span>
-        <span class="footer-links">
-          <a href="#">Impressum</a>
-          <a href="#">Datenschutz</a>
-        </span>
+        <p class="footer-note">
+          Hinweis: Das Angebot dient der Persönlichkeitsentwicklung und ersetzt keine Psychotherapie oder medizinische Behandlung.
+        </p>
+        <p>© 2024 BewegungsCheck AI – Alle Rechte vorbehalten</p>
       </div>
     </div>
   </footer>
