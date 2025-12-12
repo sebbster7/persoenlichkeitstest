@@ -223,19 +223,26 @@ body {
 }
 
 .tile {
+    background: white;
+  color: #333;
+  transition: all 0.3s ease;
   border-radius: 18px;
   padding: 30px 24px;
   text-align: left;
 }
 
-.tile-dark {
+.tile:hover {
   background: #000;
-  color: #f5f5f7;
+  color: white;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.tile-dark {
 }
 
 .tile-light {
-  background: var(--bg-grey);
-}
+  background: white;}
 
 .tile h3 {
   font-size: 22px;
