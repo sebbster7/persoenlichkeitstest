@@ -11,7 +11,7 @@
   <!-- Top-Nav -->
   <header class="nav">
     <div class="nav-inner">
-      <div class="nav-logo">Stefan</div>
+      <div class="nav-logo">PT</div>
       <nav class="nav-links">
         <a href="#tests">Tests</a>
         <a href="#coaching">Coaching</a>
@@ -42,7 +42,12 @@
           </div>
         </div>
         <div class="hero-image">
-          <img src="images/personality-hero.jpg" alt="Person betrachtet ihr Persönlichkeitsprofil">
+          <!-- Replaced placeholder with Pexels photo ID 4343780 -->
+          <img
+            src="https://images.pexels.com/photos/4343780/pexels-photo-4343780.jpeg?auto=compress&cs=tinysrgb&w=800"
+            alt="Frau mit Notizbuch, nachdenkliche Pose"
+            loading="lazy"
+          >
         </div>
       </div>
     </section>
@@ -81,7 +86,7 @@
         <p class="hero-sub hero-sub-dark">
           Beantworte ein paar Aussagen spontan. Am Ende erhältst du eine erste Einschätzung deines Profils.
         </p>
-        <form class="quicktest-form">
+        <form class="quicktest-form" id="quicktest-form">
           <div class="form-row">
             <label>Ich übernehme gerne Verantwortung in Gruppen.</label>
             <select name="q1">
@@ -112,7 +117,7 @@
               <option value="5">Trifft voll zu</option>
             </select>
           </div>
-          <button type="button" class="btn-primary" onclick="evaluateQuicktest()">Auswertung anzeigen</button>
+          <button type="button" id="quicktest-evaluate" class="btn-primary">Auswertung anzeigen</button>
         </form>
         <div id="quicktest-result" class="quicktest-result"></div>
       </div>
@@ -126,6 +131,7 @@
           Aufbauend auf dem Schnelltest erhältst du ein umfassendes Profil mit mehreren Dimensionen,
           einem klar strukturierten PDF-Report und konkreten Empfehlungen für deinen Alltag.
         </p>
+        <div id="extended-root"><!-- extended module can render here --></div>
       </div>
     </section>
 
@@ -143,10 +149,18 @@
             <li>Führung & Zusammenarbeit</li>
             <li>Umgang mit Stress & Entscheidungen</li>
           </ul>
+
+          <!-- Added Pexels photo ID 4098366 after the coaching text -->
+          <img
+            src="https://images.pexels.com/photos/4098366/pexels-photo-4098366.jpeg?auto=compress&cs=tinysrgb&w=800"
+            alt="Zwei Personen in einem Coaching-Gespräch"
+            class="coaching-image"
+            loading="lazy"
+            style="max-width:480px; margin-top:18px;"
+          >
         </div>
-        <div class="coaching-image-wrapper">
-          <img class="coaching-image" src="images/coaching-session.jpg" alt="Online Coaching Session">
-        </div>
+
+        <!-- removed separate placeholder wrapper to avoid duplicate images -->
       </div>
     </section>
 
@@ -157,6 +171,15 @@
         <p class="section-text">
           Hier kannst du kurz deinen beruflichen Hintergrund, deine Coaching-Schwerpunkte und Qualifikationen vorstellen.
         </p>
+
+        <!-- Added professional headshot (Pexels photo ID 30767577) -->
+        <img
+          src="https://images.pexels.com/photos/30767577/pexels-photo-30767577.jpeg?auto=compress&cs=tinysrgb&w=800"
+          alt="Professionelles Portrait"
+          loading="lazy"
+          class="about-image"
+          style="width:140px;height:140px;object-fit:cover;border-radius:50%;margin-top:16px;"
+        >
       </div>
     </section>
 
@@ -164,7 +187,7 @@
     <section class="section hero hero-grey" id="kontakt">
       <div class="hero-inner hero-narrow">
         <h2>Kontakt & Anfrage</h2>
-        <form class="contact-form">
+        <form class="contact-form" id="contact-form">
           <div class="form-row">
             <label>Name</label>
             <input type="text" name="name" required>
@@ -179,6 +202,7 @@
           </div>
           <button type="submit" class="btn-primary">Nachricht senden</button>
         </form>
+        <div id="contact-result" class="contact-result"></div>
       </div>
     </section>
   </main>
@@ -190,7 +214,7 @@
         Hinweis: Das Angebot dient der Persönlichkeitsentwicklung und ersetzt keine Psychotherapie oder medizinische Behandlung.
       </p>
       <div class="footer-bottom">
-        <span>© Persönlichkeitstraining – 2025</span>
+        <span>© Persönlichkeitstraining – Jahr</span>
         <span class="footer-links">
           <a href="#">Impressum</a>
           <a href="#">Datenschutz</a>
@@ -199,24 +223,7 @@
     </div>
   </footer>
 
-  <script>
-    function evaluateQuicktest() {
-      const selects = document.querySelectorAll('.quicktest-form select');
-      let sum = 0;
-      selects.forEach(s => sum += parseInt(s.value, 10));
-      const avg = sum / selects.length;
-      let text = '';
-
-      if (avg >= 4) {
-        text = 'Dein Profil wirkt sehr aktiv, strukturiert und kontaktfreudig. Nutze diese Stärken bewusst.';
-      } else if (avg >= 3) {
-        text = 'Du zeigst ausgewogene Tendenzen. Im detaillierten Test kannst du deine Feinheiten klarer erkennen.';
-      } else {
-        text = 'Du scheinst eher zurückhaltend und vorsichtig zu sein. Das kann eine Stärke sein – im Extended-Test erfährst du mehr.';
-      }
-      text += ' Wenn du genauer verstehen möchtest, wie du deine Persönlichkeit gezielt einsetzen kannst, ist der detaillierte Test für 49 € der nächste Schritt.';
-      document.getElementById('quicktest-result').textContent = text;
-    }
-  </script>
+  <!-- Main module loader: imports and initializes feature modules -->
+  <script type="module" src="js/main.js"></script>
 </body>
 </html>
