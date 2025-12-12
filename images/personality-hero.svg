@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" fill="none">
+  <rect width="1200" height="800" rx="24" fill="#EAF4FF"/>
+  <g transform="translate(80,80)">
+    <rect x="0" y="0" width="1040" height="640" rx="18" fill="#fff" stroke="#d2d2d7"/>
+    <text x="520" y="320" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto" font-size="28" fill="#1d1d1f">personality-hero.svg</text>
+  </g>
+</svg>
